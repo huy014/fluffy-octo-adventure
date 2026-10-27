@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cá Nhân - Impressive Animated Web</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Animated Particles Canvas -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- Header / Navbar với hiệu ứng Blur Glassmorphism -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#hero" class="logo">My<span>Portfolio</span><span class="dot">.</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-item active">Trang chủ</a></li>
+                <li><a href="#about" class="nav-item">Giới thiệu</a></li>
+                <li><a href="#skills" class="nav-item">Kỹ năng</a></li>
+                <li><a href="#projects" class="nav-item">Dự án</a></li>
+                <li><a href="#contact" class="nav-item">Liên hệ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn" aria-label="Đổi giao diện">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section với hiệu ứng gõ chữ (Typing Effect) & 3D Avatar Glow -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-text fade-in-left">
+                    <span class="badge shimmer-effect"><i class="fas fa-sparkles"></i> Xin chào! Tôi là</span>
+                    <h1>Lập Trình Viên <span class="typing-text" id="typingText"></span><span class="cursor">&nbsp;</span></h1>
+                    <p class="hero-desc">Sáng tạo giao diện web hiện đại, mượt mà với những trải nghiệm tương tác ấn tượng và hiệu năng tối ưu.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary btn-glow"><i class="fas fa-rocket"></i> Khám phá dự án</a>
+                        <a href="#contact" class="btn btn-secondary btn-pulse"><i class="fas fa-paper-plane"></i> Liên hệ ngay</a>
+                    </div>
+                </div>
+                <div class="hero-avatar fade-in-right">
+                    <div class="avatar-container">
+                        <div class="avatar-ring-orbit"></div>
+                        <div class="avatar-wrapper">
+                            <img src="image.jpg" alt="Avatar" class="avatar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80'">
+                        </div>
+                        <div class="floating-badge badge-1"><i class="fab fa-html5"></i> Web Dev</div>
+                        <div class="floating-badge badge-2"><i class="fab fa-python"></i> Python & AI</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Giới thiệu với hiệu ứng Tilt 3D & Glass Card -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Giới Thiệu Bản Thân</h2>
+                <div class="about-card tilt-card reveal">
+                    <div class="about-content">
+                        <div class="about-icon-box">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <div class="about-text">
+                            <p>Tôi là một nhà phát triển phần mềm đầy nhiệt huyết, luôn đam mê tìm tòi những công nghệ tiên tiến nhất. Phong cách làm việc của tôi tập trung vào sự hoàn hảo từ chi tiết nhỏ nhất trong giao diện (UI) cho đến hiệu quả trải nghiệm (UX) và tối ưu hóa hệ thống backend.</p>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <h4 class="counter" data-target="100">0</h4><span>%</span>
+                                    <p>Tâm huyết công việc</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h4 class="counter" data-target="24">0</h4><span>/7</span>
+                                    <p>Học hỏi & Đổi mới</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kỹ năng với Animated Progress Bar & Interactive Glow -->
+        <section id="skills" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Kỹ Năng Chuyên Môn</h2>
+                <div class="skills-grid">
+                    <div class="skill-card tilt-card reveal">
+                        <div class="skill-header">
+                            <i class="fab fa-html5 skill-icon html"></i>
+                            <h3>HTML5 / CSS3</h3>
+                        </div>
+                        <p>Thiết kế Responsive, Flexbox, Grid, CSS Keyframe Animations chuẩn SEO.</p>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="--percent: 90%;"></div></div>
+                    </div>
+                    <div class="skill-card tilt-card reveal">
+                        <div class="skill-header">
+                            <i class="fab fa-js-square skill-icon js"></i>
+                            <h3>JavaScript (ES6+)</h3>
+                            <p>Xử lý sự kiện DOM, Asynchronous/Promises, Animation JS & tương tác động.</p>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="--percent: 85%;"></div></div>
+                    </div>
+                    <div class="skill-card tilt-card reveal">
+                        <div class="skill-header">
+                            <i class="fab fa-python skill-icon python"></i>
+                            <h3>Python & AI</h3>
+                            <p>Tư duy giải thuật, cấu trúc dữ liệu, tự động hóa và định hướng phát triển AI.</p>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="--percent: 80%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dự án nổi bật với hiệu ứng Zoom-Hover & Light Spotlight -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Dự Án Nổi Bật</h2>
+                <div class="projects-grid">
+                    <div class="project-card tilt-card reveal">
+                        <div class="project-img-holder">
+                            <div class="overlay"></div>
+                            <i class="fas fa-laptop-code project-icon"></i>
+                            <span class="project-tag">HTML / CSS / JS Animation</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Website Portfolio Interactive</h3>
+                            <p>Trang web cá nhân nâng cấp toàn bộ hiệu ứng động: Particle Canvas background, Typing effect, Glassmorphic UI & Dark mode linh hoạt.</p>
+                            <a href="#hero" class="project-link">Xem trải nghiệm <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card tilt-card reveal">
+                        <div class="project-img-holder future-gradient">
+                            <div class="overlay"></div>
+                            <i class="fas fa-brain project-icon"></i>
+                            <span class="project-tag">Python & AI Project</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Mô hình AI & Automation</h3>
+                            <p>Dự án ứng dụng Trí Tuệ Nhân Tạo và xử lý dữ liệu thông minh trong hệ thống tự động hóa tương lai.</p>
+                            <a href="#contact" class="project-link">Đang phát triển <i class="fas fa-spinner fa-spin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form liên hệ với Animated Floating Labels & Thông tin liên hệ -->
+        <section id="contact" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Liên Hệ Với Tôi</h2>
+                
+                <!-- Khối thông tin liên hệ -->
+                <div class="contact-info reveal" style="text-align: center; margin-bottom: 25px;">
+                    <p style="margin: 8px 0;"><i class="fas fa-phone-alt"></i> <strong>Điện thoại:</strong> <a href="tel:0369343399" style="color: inherit; text-decoration: none;">0369343399</a></p>
+                    <p style="margin: 8px 0;"><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:25050012@student.bdu.edu.vn" style="color: inherit; text-decoration: none;">25050012@student.bdu.edu.vn</a></p>
+                </div>
+
+                <div class="contact-card reveal">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group floating-group">
+                            <input type="text" id="name" class="form-input" placeholder=" " required>
+                            <label for="name" class="form-label">Họ và tên *</label>
+                        </div>
+                        <div class="form-group floating-group">
+                            <input type="email" id="email" class="form-input" placeholder=" " required>
+                            <label for="email" class="form-label">Địa chỉ Email *</label>
+                        </div>
+                        <div class="form-group floating-group">
+                            <textarea id="message" class="form-input" rows="4" placeholder=" " required></textarea>
+                            <label for="message" class="form-label">Nội dung tin nhắn *</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-magnetic"><i class="fas fa-paper-plane"></i> Gửi Tin Nhắn Sáng Tạo</button>
+                    </form>
+                    <div id="formNotification" class="notification-toast">Cảm ơn bạn! Tin nhắn đã được gửi thành công.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Designed & Developed with <span class="heart-pulse"><i class="fas fa-heart"></i></span> by <strong>MyPortfolio</strong>.</p>
+            <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Lên đầu trang">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- JS File -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+</html>
